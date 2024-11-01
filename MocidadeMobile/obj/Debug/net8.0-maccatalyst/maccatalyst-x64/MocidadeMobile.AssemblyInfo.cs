@@ -14,12 +14,12 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MocidadeMobile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7bd554d82dba696659a7f301af7053a7c7ca9e78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+27b31c58027a6c32c443a534ad3a5b4d7aa07443")]
 [assembly: System.Reflection.AssemblyProductAttribute("MocidadeMobile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MocidadeMobile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("MacCatalyst18.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("MacCatalyst13.1")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("MacCatalyst18.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

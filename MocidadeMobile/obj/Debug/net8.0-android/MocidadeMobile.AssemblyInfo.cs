@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MocidadeMobile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7bd554d82dba696659a7f301af7053a7c7ca9e78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+31a9e5f1e42f5483a5ca86acd1f153abc9b83b3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MocidadeMobile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MocidadeMobile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
