@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MocidadeMobile.Views"
+             xmlns:vm="clr-namespace:MocidadeMobile.ViewModels"
+             x:Class="MocidadeMobile.Views.Menu"
+             Title=""
+             >
+
+    <Shell.BindingContext>
+        <vm:MenuViewModel />
+    </Shell.BindingContext>
+    
+    <Shell.FlyoutHeader>
+        <local:Header />
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <local:Footer />
+    </Shell.FlyoutFooter>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.25*,0.75*" Padding="0,10">
+                <Image Source="{Binding FlyoutIcon}"
+                               Margin="5"
+                               HeightRequest="45"
+                               HorizontalOptions="Center"/>
+                <Label Grid.Column="1"
+                               Text="{Binding Title}"
+                               FontSize="Small"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Home}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Carteirinha Virtual" Icon="carteirinha.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Carteirinha}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Registrar Presença" Icon="registro_presenca.png">
+        <ShellContent ContentTemplate="{DataTemplate local:RegistroPresenca}"/>
+    </FlyoutItem>
+    <MenuItem Text="Sair" IconImageSource="logout.png" Command="{Binding LogoutCommand}" />
+</Shell>

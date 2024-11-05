@@ -1,0 +1,66 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+# Diretórios de build
+/MocidadeMobile/bin/
+/MocidadeMobile/obj/
+bin/
+obj/
+Debug/
+Release/
+
+# Diretório do Visual Studio
+/MocidadeMobile/.vs/
+
+# Arquivos de configuração do Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arquivos de log
+*.log
+
+# Arquivos de pacotes NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Arquivos de cache do NuGet
+.nuget/
+
+# Arquivos de configuração do sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Arquivos de cache do sistema operacional
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+*.tmp
+
+# Arquivos de cache do editor
+.idea/
+*.iml
+
+# Arquivos de cache do Rider
+.idea/
+*.sln.iml
+
+# Arquivos de cache do JetBrains
+*.sln.DotSettings.user
+_ReSharper.Caches/
+
+# Arquivos de cache do Visual Studio Code
+.vscode/
+.history/
+/MocidadeMobile/obj/
+/MocidadeMobile/.vs/

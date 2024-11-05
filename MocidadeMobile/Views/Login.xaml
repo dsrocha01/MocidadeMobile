@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MocidadeMobile.ViewModels"
+             x:Class="MocidadeMobile.Views.Login">
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="30">
+
+        <Image Source="logo_mocidade.jpg" Aspect="AspectFit" HeightRequest="150" />
+        <Label HorizontalTextAlignment="Center" FontSize="Large">Mocidade - Login</Label>
+
+        <BoxView HeightRequest="20" Color="White" />
+
+        <Entry Placeholder="CPF" Text="{Binding Cpf}" Keyboard="Numeric" />
+
+        <BoxView HeightRequest="20" Color="White" />
+
+        <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" />
+        
+        <!-- Quebra de linha -->
+        <BoxView HeightRequest="60" Color="White" />
+
+        <Button Text="Entrar" Command="{Binding LogarCommand}" />
+    </StackLayout>
+</ContentPage>
