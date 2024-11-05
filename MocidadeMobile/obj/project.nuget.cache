@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uZDaQH70aQM=",
+  "dgSpecHash": "LETfJGY+N9s=",
   "success": true,
   "projectFilePath": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Douglas\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512",
     "C:\\Users\\Douglas\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Douglas\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Douglas\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

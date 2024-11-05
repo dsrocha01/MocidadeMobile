@@ -3,6 +3,7 @@ build_property.EnableAotAnalyzer =
 build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
 build_property.TargetFramework = net8.0-android
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -45,3 +46,45 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/Carteirinha.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.Carteirinha.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Carteirinha.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Carteirinha.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/Footer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.Footer.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Footer.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Footer.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/Header.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.Header.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Header.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Header.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Home.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Login.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/Menu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.Menu.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Menu.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Menu.xaml
+
+[C:/projetos/MocidadeMobile/MocidadeMobile/Views/RegistroPresenca.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MocidadeMobile.Views.RegistroPresenca.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RegistroPresenca.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RegistroPresenca.xaml

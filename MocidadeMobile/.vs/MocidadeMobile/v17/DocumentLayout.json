@@ -3,22 +3,31 @@
   "WorkspaceRootPath": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\MocidadeMobile\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Douglas\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\views\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:views\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\views\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:views\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\mocidademobile.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:mocidademobile.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\mocidademobile.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:mocidademobile.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|c:\\projetos\\mocidademobile\\mocidademobile\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
-      "RelativeMoniker": "D:0:0:{80796C9B-993F-4002-B4CC-D60EA5E2F77C}|MocidadeMobile.csproj|solutionrelative:platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Douglas\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -48,68 +57,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\.gitignore",
-              "RelativeDocumentMoniker": "..\\.gitignore",
-              "ToolTip": "C:\\projetos\\MocidadeMobile\\.gitignore",
-              "RelativeToolTip": "..\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-01T07:06:37.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AndroidManifest.xml",
-              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeDocumentMoniker": "Platforms\\Android\\AndroidManifest.xml",
-              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeToolTip": "Platforms\\Android\\AndroidManifest.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-11-01T04:43:41.47Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MocidadeMobile",
-              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
-              "RelativeDocumentMoniker": "MocidadeMobile.csproj",
-              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
-              "RelativeToolTip": "MocidadeMobile.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-01T04:39:00.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MocidadeMobile.csproj",
-              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
-              "RelativeDocumentMoniker": "MocidadeMobile.csproj",
-              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
-              "RelativeToolTip": "MocidadeMobile.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-01T04:38:18.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Microsoft.Maui.Resizetizer.After.targets",
               "DocumentMoniker": "C:\\Users\\Douglas\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\Douglas\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
               "ToolTip": "C:\\Users\\Douglas\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
               "RelativeToolTip": "..\\..\\..\\Users\\Douglas\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.82\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
-              "ViewState": "AgIAAFwCAAAAAAAAAAAIwHUCAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAF4CAAAAAAAAAAAtwG8CAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-11-01T04:44:44.106Z",
+              "WhenOpened": "2024-11-05T01:44:07.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Menu.xaml",
+              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Views\\Menu.xaml",
+              "RelativeDocumentMoniker": "Views\\Menu.xaml",
+              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Views\\Menu.xaml",
+              "RelativeToolTip": "Views\\Menu.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T01:18:37.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Menu.xaml.cs",
+              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Views\\Menu.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Menu.xaml.cs",
+              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Views\\Menu.xaml.cs",
+              "RelativeToolTip": "Views\\Menu.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:18:21.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:05:14.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:54:15.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Views\\Login.xaml",
+              "RelativeDocumentMoniker": "Views\\Login.xaml",
+              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\Views\\Login.xaml",
+              "RelativeToolTip": "Views\\Login.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T00:21:29.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MocidadeMobile.csproj",
+              "DocumentMoniker": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
+              "RelativeDocumentMoniker": "MocidadeMobile.csproj",
+              "ToolTip": "C:\\projetos\\MocidadeMobile\\MocidadeMobile\\MocidadeMobile.csproj",
+              "RelativeToolTip": "MocidadeMobile.csproj",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-02T04:06:35.07Z",
               "EditorCaption": ""
             }
           ]
