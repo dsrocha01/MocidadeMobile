@@ -5,6 +5,10 @@
 # Diretórios de build
 /MocidadeMobile/bin/
 /MocidadeMobile/obj/
+bin/
+obj/
+Debug/
+Release/
 
 # Diretório do Visual Studio
 /MocidadeMobile/.vs/
@@ -58,3 +62,5 @@ _ReSharper.Caches/
 # Arquivos de cache do Visual Studio Code
 .vscode/
 .history/
+/MocidadeMobile/obj/
+/MocidadeMobile/.vs/
