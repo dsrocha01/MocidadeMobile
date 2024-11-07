@@ -35,7 +35,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconforeground.svg" Color="#FFF" />
+		<MauiIcon Include="Resources\Splash\splash.svg" ForegroundFile="Resources\Splash\splash.svg" Color="#FFF" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFF" BaseSize="250,250" />
@@ -60,6 +60,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="MySql.Data" Version="9.1.0" />
 		<PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	</ItemGroup>
 

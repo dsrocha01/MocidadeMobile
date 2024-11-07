@@ -1,25 +1,32 @@
-﻿using System.Windows.Input;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using Microsoft.Maui.Controls;
+using MocidadeMobile.Models;
 using MocidadeMobile.Views;
+using MocidadeMobile.Enums;
 using MvvmHelpers;
 
 namespace MocidadeMobile.ViewModels
 {
     public class MenuViewModel : BaseViewModel
     {
-        public ICommand LogoutCommand { get; }
+        private readonly Usuario _loggedInUser;
 
-        public MenuViewModel()
+        public MenuViewModel(Usuario loggedInUser)
         {
-            LogoutCommand = new Command(OnLogout);
+            _loggedInUser = loggedInUser;
         }
 
-        private async void OnLogout()
-        {
-            // Limpe qualquer estado de autenticação aqui, se necessário
+        public bool IsAdministrador => _loggedInUser.NivelAcesso == EnumNivelAcesso.Administrador;
+        public bool IsUsuario => _loggedInUser.NivelAcesso == EnumNivelAcesso.Usuario;
+        public bool IsMembro => _loggedInUser.NivelAcesso == EnumNivelAcesso.Membro;
 
-            // Navegue de volta para a página de login
-            await Application.Current.MainPage.Navigation.PushAsync(new Login());
+        public new event PropertyChangedEventHandler PropertyChanged;
+
+        protected override void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

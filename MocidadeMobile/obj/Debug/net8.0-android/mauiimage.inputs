@@ -4,4 +4,4 @@ File=Resources\Images\home.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIc
 File=Resources\Images\logout.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\logo_mocidade.jpg;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\Images\registro_presenca.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\AppIcon\appicon.svg;Link=;BaseSize=;Resize=;TintColor=;Color=#FFF;IsAppIcon=True;ForegroundScale=;ForegroundFile=Resources\AppIcon\appiconforeground.svg
+File=Resources\Splash\splash.svg;Link=;BaseSize=;Resize=;TintColor=;Color=#FFF;IsAppIcon=True;ForegroundScale=;ForegroundFile=Resources\Splash\splash.svg

@@ -1,4 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
+using MocidadeMobile.Models;
 
 namespace MocidadeMobile
 {
@@ -15,8 +20,9 @@ namespace MocidadeMobile
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<Usuario>();
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

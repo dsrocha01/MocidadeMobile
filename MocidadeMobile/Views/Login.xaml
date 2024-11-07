@@ -4,10 +4,6 @@
              xmlns:vm="clr-namespace:MocidadeMobile.ViewModels"
              x:Class="MocidadeMobile.Views.Login">
 
-    <ContentPage.BindingContext>
-        <vm:LoginViewModel />
-    </ContentPage.BindingContext>
-
     <StackLayout Padding="30">
 
         <Image Source="logo_mocidade.jpg" Aspect="AspectFit" HeightRequest="150" />
@@ -15,15 +11,15 @@
 
         <BoxView HeightRequest="20" Color="White" />
 
-        <Entry Placeholder="CPF" Text="{Binding Cpf}" Keyboard="Numeric" />
+        <Entry x:Name="txtCpf" MaxLength="11" Placeholder="CPF" Text="{Binding Cpf}" Keyboard="Numeric" />
 
         <BoxView HeightRequest="20" Color="White" />
 
-        <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" />
+        <Entry x:Name="txtSenha" Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" />
         
         <!-- Quebra de linha -->
         <BoxView HeightRequest="60" Color="White" />
 
-        <Button Text="Entrar" Command="{Binding LogarCommand}" />
+        <Button Text="Entrar" Clicked="OnLoginButtonClicked" />
     </StackLayout>
 </ContentPage>

@@ -73,6 +73,10 @@
               "version": "[8.0.10, )",
               "autoReferenced": true
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.1.0, )"
+            },
             "Refractored.MvvmHelpers": {
               "target": "Package",
               "version": "[1.6.2, )"

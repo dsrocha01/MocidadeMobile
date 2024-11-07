@@ -7,10 +7,6 @@
              Title=""
              >
 
-    <Shell.BindingContext>
-        <vm:MenuViewModel />
-    </Shell.BindingContext>
-    
     <Shell.FlyoutHeader>
         <local:Header />
     </Shell.FlyoutHeader>
@@ -38,11 +34,11 @@
     <FlyoutItem Title="Home" Icon="home.png">
         <ShellContent ContentTemplate="{DataTemplate local:Home}" />
     </FlyoutItem>
-    <FlyoutItem Title="Carteirinha Virtual" Icon="carteirinha.png">
+    <FlyoutItem Title="Carteirinha Virtual" Icon="carteirinha.png" IsVisible="{Binding IsMembro}">
         <ShellContent ContentTemplate="{DataTemplate local:Carteirinha}" />
     </FlyoutItem>
-    <FlyoutItem Title="Registrar Presença" Icon="registro_presenca.png">
+    <FlyoutItem Title="Registrar Presença" Icon="registro_presenca.png" IsVisible="{Binding IsUsuario}">
         <ShellContent ContentTemplate="{DataTemplate local:RegistroPresenca}"/>
     </FlyoutItem>
-    <MenuItem Text="Sair" IconImageSource="logout.png" Command="{Binding LogoutCommand}" />
+    <MenuItem Text="Sair" IconImageSource="logout.png" Clicked="OnLogoutButtonClicked" />
 </Shell>
