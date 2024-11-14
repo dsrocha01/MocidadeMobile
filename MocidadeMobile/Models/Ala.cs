@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace MocidadeMobile.Models
 {
-    public class Usuario
+    public class Ala
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string CPF { get; set; }
-        public string Senha { get; set; }
-        public EnumNivelAcesso NivelAcesso { get; set; }
+        public string Responsavel { get; set; }
+
     }
 }

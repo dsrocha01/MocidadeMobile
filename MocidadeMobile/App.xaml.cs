@@ -7,6 +7,7 @@ namespace MocidadeMobile
     {
         private readonly Usuario _usuario;
 
+        [Obsolete]
         public App(Usuario usuario)
         {
             InitializeComponent();
@@ -14,6 +15,7 @@ namespace MocidadeMobile
             SetMainPage();
         }
 
+        [Obsolete]
         private void SetMainPage()
         {
             if (DeviceInfo.Platform == DevicePlatform.Android && DeviceInfo.Version.Major >= 12)

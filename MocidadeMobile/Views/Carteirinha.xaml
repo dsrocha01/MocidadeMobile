@@ -2,11 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MocidadeMobile.Views.Carteirinha"
-             Title="Carteirinha">
-    <VerticalStackLayout>
-        <Label 
-            Text="Carteirinha"
+             Title="Carteirinha Mocidade">
+    <Grid>
+        <VerticalStackLayout x:Name="ContentLayout" IsVisible="False">
+            <BoxView BackgroundColor="#14562c" HeightRequest="3" WidthRequest="400" HorizontalOptions="Start" ></BoxView>
+
+            <Image Source="Resources/Images/logo_mocidade.jpg" WidthRequest="250" Margin="0"></Image>
+            
+            <VerticalStackLayout Margin="0 0 30 0">
+
+                <Label 
+            Text="Nome "
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            HorizontalOptions="Center"
+            Margin="0,0,0,0" FontSize="Large" FontAttributes="None"/>
+
+                <Label Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" FontSize="30" FontAttributes="Bold"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="0 0 30 0">
+
+                <Label 
+            Text="CPF"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,0,0,0" FontSize="Large" FontAttributes="None"/>
+
+                <Label Text="118.886.087-90" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" FontSize="30" FontAttributes="Bold"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Margin="0 0 0 0">
+
+                <Label 
+            Text="Ala"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,0,0,0" FontSize="Large" FontAttributes="None"/>
+
+                <Label Text="Comunidade 12" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" FontSize="30" FontAttributes="Bold"/>
+            </VerticalStackLayout>
+
+            <BoxView BackgroundColor="Transparent" HeightRequest="40" WidthRequest="400" HorizontalOptions="Start" ></BoxView>
+
+            <BoxView BackgroundColor="#14562c" HeightRequest="10" WidthRequest="400" HorizontalOptions="Start" Margin="50 0 -40 0" ></BoxView>
+            <BoxView BackgroundColor="Transparent" HeightRequest="40" WidthRequest="400" HorizontalOptions="Start" Margin="0 0 0 0" ></BoxView>
+            <Image Source="Resources/Images/bg_carteirinha.jpg" WidthRequest="400" HeightRequest="180" BackgroundColor="Black" Aspect="AspectFill"></Image>
+        </VerticalStackLayout>
+        <!-- ActivityIndicator para o efeito de loading -->
+        <ActivityIndicator x:Name="LoadingIndicator" IsRunning="True" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />
+    </Grid>
 </ContentPage>

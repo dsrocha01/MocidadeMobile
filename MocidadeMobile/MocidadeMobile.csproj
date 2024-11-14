@@ -52,6 +52,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\bg_carteirinha.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\bg_carteirinha.png" />
 	  <None Remove="Resources\Images\logo_mocidade.jpg" />
 	</ItemGroup>
 
