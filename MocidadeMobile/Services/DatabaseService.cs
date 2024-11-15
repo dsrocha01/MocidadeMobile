@@ -7,11 +7,10 @@ namespace MocidadeMobile.Services
 {
     public class DatabaseService
     {
-        private readonly string _connectionString;
+        private readonly string _connectionString = "server=mysql995.umbler.com;port=41890;user=mocidade;password=doug94887192;database=mocidade";
 
-        public DatabaseService(string connectionString)
+        public DatabaseService()
         {
-            _connectionString = connectionString;
         }
 
         public async Task<DataTable> ExecuteQueryAsync(string query)

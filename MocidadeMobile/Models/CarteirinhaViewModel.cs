@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MocidadeMobile.Models
 {
-    public class Carteirinha
+    public class CarteirinhaViewModel
     {
         public Usuario Usuario { get; set; } = new Usuario();
 

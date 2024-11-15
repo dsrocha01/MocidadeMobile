@@ -17,14 +17,13 @@ namespace MocidadeMobile.Controllers
 
         public CarteirinhaController(Page page)
         {
-            string connectionString = "server=mysql995.umbler.com:41890;user=mocidade;password=doug94887192;database=mocidade";
-            _databaseService = new DatabaseService(connectionString);
+            _databaseService = new DatabaseService();
             _page = page;
         }
 
-        public async Task<Carteirinha> ObtemCarteirinha(string cpf)
+        public async Task<CarteirinhaViewModel> ObtemCarteirinha(string cpf)
         {
-            Carteirinha carteirinha = new Carteirinha();
+            CarteirinhaViewModel carteirinha = new CarteirinhaViewModel();
 
             try
             {

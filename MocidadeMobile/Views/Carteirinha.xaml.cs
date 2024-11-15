@@ -1,16 +1,22 @@
 namespace MocidadeMobile.Views;
 using Microsoft.Maui.Controls;
 using MocidadeMobile.Controllers;
+using MocidadeMobile.Models;
+using MocidadeMobile.Services;
 
 public partial class Carteirinha : ContentPage
 {
-    //private readonly CarteirinhaController _carteirinha;
+    private readonly CarteirinhaController _carteirinha;
+    private readonly SessionService _sessionService;
+    private readonly QrCodeService _qrCodeService;
 
     public Carteirinha()
 	{
 		InitializeComponent();
         NavigationPage.SetHasNavigationBar(this, false);
-        //_carteirinha = new CarteirinhaController(Carteirinha);
+        _carteirinha = new CarteirinhaController(this);
+        _sessionService = new SessionService();
+        _qrCodeService = new QrCodeService();
         LoadData();
     }
 
@@ -19,8 +25,21 @@ public partial class Carteirinha : ContentPage
     {
         // Simula o carregamento de dados com um atraso
         await Task.Delay(2000);
+        Usuario usuario = _sessionService.GetUserSession();
 
-        //Carteirinha carteirinha = await CarteirinhaController();
+        CarteirinhaViewModel carteirinha = await _carteirinha.ObtemCarteirinha(usuario.CPF);
+
+        if(usuario != null)
+        {
+            // Atualiza as Labels com os dados obtidos
+            txtNome.Text = carteirinha.Usuario.Nome;
+            txtCPF.Text = carteirinha.Usuario.CPF;
+            txtAla.Text = carteirinha.Ala.Nome;
+
+            // Gera o QR code com o CPF do usuário
+            QrCodeImage.Source = _qrCodeService.GenerateQrCode(usuario.CPF);
+        }
+        
 
         // Após o carregamento dos dados, exibe o conteúdo e oculta o indicador de carregamento
         LoadingIndicator.IsRunning = false;

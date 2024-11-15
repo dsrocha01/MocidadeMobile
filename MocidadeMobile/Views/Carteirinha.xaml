@@ -7,9 +7,9 @@
         <VerticalStackLayout x:Name="ContentLayout" IsVisible="False">
             <BoxView BackgroundColor="#14562c" HeightRequest="3" WidthRequest="400" HorizontalOptions="Start" ></BoxView>
 
-            <Image Source="Resources/Images/logo_mocidade.jpg" WidthRequest="250" Margin="0"></Image>
+            <Image Source="Resources/Images/logo_mocidade.jpg" WidthRequest="150" Margin="0"></Image>
             
-            <VerticalStackLayout Margin="0 0 30 0">
+            <VerticalStackLayout Margin="0,0 ,30, 0">
 
                 <Label 
             Text="Nome "
@@ -17,10 +17,10 @@
             HorizontalOptions="Center"
             Margin="0,0,0,0" FontSize="Large" FontAttributes="None"/>
 
-                <Label Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" FontSize="30" FontAttributes="Bold"/>
+                <Label x:Name="txtNome" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="25" FontAttributes="Bold"/>
             </VerticalStackLayout>
 
-            <VerticalStackLayout Margin="0 0 30 0">
+            <VerticalStackLayout Margin="0, 0, 30, 0">
 
                 <Label 
             Text="CPF"
@@ -28,25 +28,25 @@
             HorizontalOptions="Center"
             Margin="0,0,0,0" FontSize="Large" FontAttributes="None"/>
 
-                <Label Text="118.886.087-90" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" FontSize="30" FontAttributes="Bold"/>
+                <Label x:Name="txtCPF" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="25" FontAttributes="Bold"/>
             </VerticalStackLayout>
 
-            <VerticalStackLayout Margin="0 0 0 0">
+            <VerticalStackLayout Margin="0, 0, 0, 0">
 
                 <Label 
             Text="Ala"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            Margin="0,0,0,0" FontSize="Large" FontAttributes="None"/>
+            Margin="-25,0,0,0" FontSize="Large" FontAttributes="None"/>
 
-                <Label Text="Comunidade 12" VerticalOptions="Center" HorizontalOptions="Center" Margin="5,0,0,0" FontSize="30" FontAttributes="Bold"/>
+                <Label x:Name="txtAla" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="25" FontAttributes="Bold"/>
             </VerticalStackLayout>
 
-            <BoxView BackgroundColor="Transparent" HeightRequest="40" WidthRequest="400" HorizontalOptions="Start" ></BoxView>
+            <Image x:Name="QrCodeImage" WidthRequest="200" HeightRequest="200" VerticalOptions="Center" HorizontalOptions="Center" />
 
-            <BoxView BackgroundColor="#14562c" HeightRequest="10" WidthRequest="400" HorizontalOptions="Start" Margin="50 0 -40 0" ></BoxView>
-            <BoxView BackgroundColor="Transparent" HeightRequest="40" WidthRequest="400" HorizontalOptions="Start" Margin="0 0 0 0" ></BoxView>
-            <Image Source="Resources/Images/bg_carteirinha.jpg" WidthRequest="400" HeightRequest="180" BackgroundColor="Black" Aspect="AspectFill"></Image>
+            <BoxView BackgroundColor="Transparent" HeightRequest="40" WidthRequest="400" HorizontalOptions="Start" VerticalOptions="End" Margin="0,10,0,0" ></BoxView>
+            <BoxView BackgroundColor="#14562c" HeightRequest="10" WidthRequest="400" HorizontalOptions="Start" VerticalOptions="End" Margin="0,0,40,0" ></BoxView>
+            <Image Source="Resources/Images/bg_carteirinha.jpg" WidthRequest="400" HeightRequest="120" VerticalOptions="Fill" Aspect="AspectFill"></Image>
         </VerticalStackLayout>
         <!-- ActivityIndicator para o efeito de loading -->
         <ActivityIndicator x:Name="LoadingIndicator" IsRunning="True" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />

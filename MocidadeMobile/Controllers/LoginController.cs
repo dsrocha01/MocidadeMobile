@@ -16,11 +16,12 @@ namespace MocidadeMobile.Controllers
     {
         private readonly DatabaseService _databaseService;
         private readonly Page _page;
+        private readonly SessionService _sessionService;
 
         public LoginController(Page page)
         {
-            string connectionString = "server=mysql995.umbler.com;port=41890;user=mocidade;password=doug94887192;database=mocidade";
-            _databaseService = new DatabaseService(connectionString);
+            _databaseService = new DatabaseService();
+            _sessionService = new SessionService();
             _page = page;
         }
 
@@ -30,7 +31,7 @@ namespace MocidadeMobile.Controllers
 
             try
             {
-                string query = $"SELECT * FROM usuario WHERE cpf = '{cpf}' AND Senha = '{senha}'";
+                string query = $"SELECT * FROM usuario WHERE cpf = '{cpf}' AND senha = '{senha}'";
                 DataTable result = await _databaseService.ExecuteQueryAsync(query);
                 
                 if (result.Rows.Count > 0)
@@ -39,7 +40,7 @@ namespace MocidadeMobile.Controllers
 
                     usuario.Id = Convert.ToInt32(row["Id"]);
                     usuario.CPF = row["cpf"].ToString() ?? "";                    
-                    usuario.Senha = row["Senha"].ToString() ?? "";
+                    usuario.Senha = row["senha"].ToString() ?? "";
                     usuario.NivelAcesso = (EnumNivelAcesso)Convert.ToInt32(row["tipo"]);
 
                     return usuario;
@@ -63,8 +64,11 @@ namespace MocidadeMobile.Controllers
             // Verifique se Application.Current e Application.Current.MainPage não são nulos
             if (Application.Current?.MainPage?.Navigation != null)
             {
+                _sessionService.ClearUserSession();
                 // Navegue de volta para a página de login
-                await Application.Current.MainPage.Navigation.PushAsync(new Login());
+                ////await Application.Current.MainPage.Navigation.PushAsync(new Login());
+                // Navegue de volta para a página de login usando Shell
+                await Shell.Current.GoToAsync("//Login");
             }
             else
             {

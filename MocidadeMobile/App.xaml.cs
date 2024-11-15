@@ -1,5 +1,7 @@
 ﻿using Microsoft.Maui.Controls;
 using MocidadeMobile.Models;
+using MocidadeMobile.Services;
+using MocidadeMobile.Views;
 
 namespace MocidadeMobile
 {
@@ -7,31 +9,51 @@ namespace MocidadeMobile
     {
         private readonly Usuario _usuario;
 
-        [Obsolete]
+        private readonly SessionService _sessionService;
+
         public App(Usuario usuario)
         {
             InitializeComponent();
             _usuario = usuario;
+            _sessionService = new SessionService();
             SetMainPage();
         }
 
-        [Obsolete]
+
         private void SetMainPage()
         {
             if (DeviceInfo.Platform == DevicePlatform.Android && DeviceInfo.Version.Major >= 12)
             {
-                MainPage = new NavigationPage(new Views.Login());
+                //Verifica se já esta logado via session e caso sim, redireciona para home
+                Usuario sessao = _sessionService.GetUserSession();
+                // Navegar para a página principal
+                if (sessao != null && sessao.Id > 0 && Application.Current != null)
+                {
+                    MainPage = new NavigationPage(new Views.Menu(sessao));
+                }
+                else
+                {
+                    MainPage = new NavigationPage(new Views.Login());
+                }
             }
             else
             {
                 // Handle other platforms or show a message
                 MainPage = new ContentPage
                 {
-                    Content = new Label
+                    Content = new Grid
                     {
-                        Text = "Esse App só é suportado no Android 12 ou acima.",
-                        VerticalOptions = LayoutOptions.CenterAndExpand,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand
+                        VerticalOptions = LayoutOptions.Center,
+                        HorizontalOptions = LayoutOptions.Center,
+                        Children =
+                            {
+                                new Label
+                                {
+                                    Text = "Esse App só é suportado no Android 12 ou acima.",
+                                    VerticalOptions = LayoutOptions.Center,
+                                    HorizontalOptions = LayoutOptions.Center
+                                }
+                            }
                     }
                 };
             }

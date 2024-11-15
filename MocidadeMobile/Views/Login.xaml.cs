@@ -1,6 +1,7 @@
 using Microsoft.Maui.Controls;
 using MocidadeMobile.Controllers;
 using MocidadeMobile.Models;
+using MocidadeMobile.Services;
 using MocidadeMobile.ViewModels;
 using Org.BouncyCastle.Asn1.X509;
 
@@ -9,10 +10,12 @@ namespace MocidadeMobile.Views;
 public partial class Login : ContentPage
 {
     private readonly LoginController _loginController;
+    private readonly SessionService _sessionService;
     public Login()
     {
         InitializeComponent();
         _loginController = new LoginController(this);
+        _sessionService = new SessionService();
         NavigationPage.SetHasNavigationBar(this, false);
     }
 
@@ -23,8 +26,11 @@ public partial class Login : ContentPage
 
         Usuario loggedInUser = await _loginController.Logar(cpf, senha);
 
-        if (loggedInUser != null && Application.Current != null)
+        if (loggedInUser != null && loggedInUser.Id > 0 && Application.Current != null)
         {
+            // Salva a sessão do usuário
+            _sessionService.SaveUserSession(loggedInUser);
+
             // Navegar para a página principal
             Application.Current.MainPage = new Menu(loggedInUser);
         }
