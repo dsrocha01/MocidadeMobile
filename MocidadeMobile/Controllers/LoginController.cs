@@ -25,9 +25,9 @@ namespace MocidadeMobile.Controllers
             _page = page;
         }
 
-        public async Task<Usuario> Logar(string cpf, string senha)
+        public async Task<UsuarioViewModel> Logar(string cpf, string senha)
         {
-            Usuario usuario = new Usuario();
+            UsuarioViewModel usuario = new UsuarioViewModel();
 
             try
             {

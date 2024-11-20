@@ -8,7 +8,7 @@ namespace MocidadeMobile.Models
 {
     public class CarteirinhaViewModel
     {
-        public Usuario Usuario { get; set; } = new Usuario();
+        public UsuarioViewModel Usuario { get; set; } = new UsuarioViewModel();
 
         public Ala Ala { get; set; } = new Ala();
     }

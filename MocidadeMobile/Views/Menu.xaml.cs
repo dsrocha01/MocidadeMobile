@@ -7,7 +7,7 @@ public partial class Menu : Shell
 {
     private readonly LoginController _loginController;
 
-    public Menu(Usuario loggedInUser)
+    public Menu(UsuarioViewModel loggedInUser)
 	{
 		InitializeComponent();
         _loginController = new LoginController(this);

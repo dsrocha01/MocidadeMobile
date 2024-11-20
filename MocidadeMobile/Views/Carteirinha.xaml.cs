@@ -25,7 +25,7 @@ public partial class Carteirinha : ContentPage
     {
         // Simula o carregamento de dados com um atraso
         await Task.Delay(2000);
-        Usuario usuario = _sessionService.GetUserSession();
+        UsuarioViewModel usuario = _sessionService.GetUserSession();
 
         CarteirinhaViewModel carteirinha = await _carteirinha.ObtemCarteirinha(usuario.CPF);
 

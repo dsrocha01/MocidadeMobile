@@ -11,7 +11,7 @@ namespace MocidadeMobile.Services
         private const string UserCPFKey = "UserCPF";
         private const string UserAccessLevelKey = "UserAccessLevel";
 
-        public void SaveUserSession(Usuario usuario)
+        public void SaveUserSession(UsuarioViewModel usuario)
         {
             Preferences.Set(UserIdKey, usuario.Id);
             Preferences.Set(UserNameKey, usuario.Nome);
@@ -19,11 +19,11 @@ namespace MocidadeMobile.Services
             Preferences.Set(UserAccessLevelKey, (int)usuario.NivelAcesso);
         }
 
-        public Usuario GetUserSession()
+        public UsuarioViewModel GetUserSession()
         {
             if (Preferences.ContainsKey(UserIdKey))
             {
-                return new Usuario
+                return new UsuarioViewModel
                 {
                     Id = Preferences.Get(UserIdKey, 0),
                     Nome = Preferences.Get(UserNameKey, string.Empty),
@@ -31,7 +31,7 @@ namespace MocidadeMobile.Services
                     NivelAcesso = (EnumNivelAcesso)Preferences.Get(UserAccessLevelKey, 0)
                 };
             }
-            return new Usuario();
+            return new UsuarioViewModel();
         }
 
         public void ClearUserSession()

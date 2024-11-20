@@ -40,5 +40,8 @@
     <FlyoutItem Title="Registrar Presença" Icon="registro_presenca.png" IsVisible="{Binding IsUsuario}">
         <ShellContent ContentTemplate="{DataTemplate local:RegistroPresenca}"/>
     </FlyoutItem>
+    <FlyoutItem Title="Configuração" Icon="configuracao.png" IsVisible="{Binding IsUsuario}">
+        <ShellContent ContentTemplate="{DataTemplate local:Configuracao}"/>
+    </FlyoutItem>
     <MenuItem Text="Sair" IconImageSource="logout.png" Clicked="OnLogoutButtonClicked" />
 </Shell>

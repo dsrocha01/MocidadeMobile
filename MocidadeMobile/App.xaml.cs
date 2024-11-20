@@ -7,11 +7,11 @@ namespace MocidadeMobile
 {
     public partial class App : Application
     {
-        private readonly Usuario _usuario;
+        private readonly UsuarioViewModel _usuario;
 
         private readonly SessionService _sessionService;
 
-        public App(Usuario usuario)
+        public App(UsuarioViewModel usuario)
         {
             InitializeComponent();
             _usuario = usuario;
@@ -25,7 +25,7 @@ namespace MocidadeMobile
             if (DeviceInfo.Platform == DevicePlatform.Android && DeviceInfo.Version.Major >= 12)
             {
                 //Verifica se já esta logado via session e caso sim, redireciona para home
-                Usuario sessao = _sessionService.GetUserSession();
+                UsuarioViewModel sessao = _sessionService.GetUserSession();
                 // Navegar para a página principal
                 if (sessao != null && sessao.Id > 0 && Application.Current != null)
                 {

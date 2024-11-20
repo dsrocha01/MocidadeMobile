@@ -24,7 +24,7 @@ public partial class Login : ContentPage
         string cpf = txtCpf.Text;
         string senha = txtSenha.Text;
 
-        Usuario loggedInUser = await _loginController.Logar(cpf, senha);
+        UsuarioViewModel loggedInUser = await _loginController.Logar(cpf, senha);
 
         if (loggedInUser != null && loggedInUser.Id > 0 && Application.Current != null)
         {

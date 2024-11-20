@@ -11,9 +11,9 @@ namespace MocidadeMobile.ViewModels
 {
     public class MenuViewModel : BaseViewModel
     {
-        private readonly Usuario _loggedInUser;
+        private readonly UsuarioViewModel _loggedInUser;
 
-        public MenuViewModel(Usuario loggedInUser)
+        public MenuViewModel(UsuarioViewModel loggedInUser)
         {
             _loggedInUser = loggedInUser;
         }

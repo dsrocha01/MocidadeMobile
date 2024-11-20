@@ -20,7 +20,7 @@ namespace MocidadeMobile
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.AddSingleton<Usuario>();
+            builder.Services.AddSingleton<UsuarioViewModel>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
