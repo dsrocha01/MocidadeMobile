@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MocidadeMobile.Views.RegistroPresenca"
              Title="">
-    <VerticalStackLayout>
-        <Label 
-            Text="RegistroPresenca"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <VerticalStackLayout x:Name="ContentLayoutRegistroPresenca" IsVisible="False">
+            <Label 
+        Text="Evento em andamento"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        Margin="-25,0,0,0" FontSize="Large" FontAttributes="None"/>
+
+            <Label x:Name="txtEventoEmAndamento" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="20" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+        <!-- ActivityIndicator para o efeito de loading -->
+        <ActivityIndicator x:Name="LoadingIndicatorRegistroPresenca" IsRunning="True" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />
+    </Grid>
+    
 </ContentPage>

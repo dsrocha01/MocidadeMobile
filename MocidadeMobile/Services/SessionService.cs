@@ -10,6 +10,8 @@ namespace MocidadeMobile.Services
         private const string UserNameKey = "UserName";
         private const string UserCPFKey = "UserCPF";
         private const string UserAccessLevelKey = "UserAccessLevel";
+        private const string IdEventoEmAndamento = "IdEventoEmAndamento";
+        private const string NomeEventoEmAndamento = "NomeEventoEmAndamento";
 
         public void SaveUserSession(UsuarioViewModel usuario)
         {
@@ -41,5 +43,25 @@ namespace MocidadeMobile.Services
             Preferences.Remove(UserCPFKey);
             Preferences.Remove(UserAccessLevelKey);
         }
+
+        public void SaveEventoEmAndamento(EventoViewModel evento)
+        {
+            Preferences.Set(IdEventoEmAndamento, evento.CodigoEvento);
+            Preferences.Set(NomeEventoEmAndamento, evento.Nome);
+        }
+
+        public EventoViewModel GetEventoEmAndamento()
+        {
+            if (Preferences.ContainsKey(NomeEventoEmAndamento))
+            {
+                return new EventoViewModel
+                {
+                    CodigoEvento = Preferences.Get(IdEventoEmAndamento, 0),
+                    Nome = Preferences.Get(NomeEventoEmAndamento, string.Empty),
+                };
+            }
+            return new EventoViewModel();
+        }
+
     }
 }

@@ -5,7 +5,7 @@
              Title="Configuracao">
     <StackLayout Padding="30">
 
-        <Image Source="configuracao.png" Aspect="AspectFit" HeightRequest="100" />
+        <Image Source="configuracao.png" Aspect="AspectFit" HeightRequest="50" />
         <Label HorizontalTextAlignment="Center" FontSize="Large">Configurações do App</Label>
 
         <BoxView HeightRequest="40" Color="White" />
@@ -15,13 +15,14 @@
         <BoxView HeightRequest="40" Color="White" />
         
         <!-- Picker para exibir dados do banco -->
-        <Picker x:Name="dataPicker" Title="Selecione um Evento" ItemsSource="{Binding EventoList}" ItemDisplayBinding="{Binding Nome}" />
+        <Picker x:Name="dataPicker" Title="Selecione um Evento" ItemsSource="{Binding ListaEventos}" ItemDisplayBinding="{Binding Nome}" SelectedItem="{Binding EventoSelecionado}" 
+        SelectedIndexChanged="OnPickerSelectedIndexChanged" />
 
         <BoxView HeightRequest="30" Color="White" />
 
             <!-- Quebra de linha -->
         <BoxView HeightRequest="60" Color="White" />
 
-        <Button Text="Salvar"  />
+        <Button Text="Salvar" Clicked="OnSalvarConfiguracaoClicked" />
     </StackLayout>
 </ContentPage>

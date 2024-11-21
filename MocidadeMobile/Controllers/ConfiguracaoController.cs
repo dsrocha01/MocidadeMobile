@@ -17,11 +17,13 @@ namespace MocidadeMobile.Controllers
     public class ConfiguracaoController
     {
         private readonly DatabaseService _databaseService;
+        private readonly SessionService _sessionService;
         private readonly Page _page;
 
         public ConfiguracaoController()
         {
             _databaseService = new DatabaseService();
+            _sessionService = new SessionService();
             //_page = page;
         }
 
@@ -58,6 +60,24 @@ namespace MocidadeMobile.Controllers
             }
         }
 
+        public async Task<bool> SalvaEventoEmAndamento(EventoViewModel evento)
+        {
+            try
+            {
+                if (evento != null)
+                {
+                    _sessionService.SaveEventoEmAndamento(evento);
+                }
+                return true;
+            }
+            catch(Exception ex)
+            {
+                await MessageService.SendAlertAsync($"Atenção", $"Ocorreu um erro: {ex.Message}");
+                return false;
+            }
+
+
+        }
 
     }
 }

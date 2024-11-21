@@ -13,13 +13,24 @@ namespace MocidadeMobile.Models
     {
         private readonly ConfiguracaoController _configuracaoController;
         private ObservableCollection<EventoViewModel> _eventoList;
+        private EventoViewModel _eventoSelecionado;
 
-        private ObservableCollection<EventoViewModel> ListaEventos
+        public ObservableCollection<EventoViewModel> ListaEventos
         {
             get => _eventoList;
             set
             {
                 _eventoList = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public EventoViewModel EventoSelecionado
+        {
+            get => _eventoSelecionado;
+            set
+            {
+                _eventoSelecionado = value;
                 OnPropertyChanged();
             }
         }
@@ -42,5 +53,23 @@ namespace MocidadeMobile.Models
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+
+        public async void OnSalvarConfiguracaoClicked()
+        {
+            if (EventoSelecionado != null)
+            {
+                var sucesso = await _configuracaoController.SalvaEventoEmAndamento(EventoSelecionado);
+                if (sucesso)
+                {
+                    await MessageService.SendAlertAsync("Pronto","Configuração salva com sucesso!");
+                }
+                else
+                {
+                    await MessageService.SendAlertAsync("Atenção", "Falha ao salvar configuração.");
+                }
+            }
+        }
+
     }
 }
