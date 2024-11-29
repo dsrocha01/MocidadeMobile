@@ -1,6 +1,5 @@
 using MocidadeMobile.Controllers;
 using MocidadeMobile.Models;
-using MocidadeMobile.ViewModels;
 namespace MocidadeMobile.Views;
 
 public partial class Menu : Shell

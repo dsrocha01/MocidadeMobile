@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
              x:Class="MocidadeMobile.Views.RegistroPresenca"
-             Title="">
+             Title="Registro de presença">
     <Grid>
         <VerticalStackLayout x:Name="ContentLayoutRegistroPresenca" IsVisible="False">
+        <BoxView HeightRequest="20" Color="White" />
             <Label 
         Text="Evento em andamento"
         VerticalOptions="Center" 
         HorizontalOptions="Center"
-        Margin="-25,0,0,0" FontSize="Large" FontAttributes="None"/>
-
+        Margin="-25,0,0,0" FontSize="Medium" FontAttributes="None"/>
             <Label x:Name="txtEventoEmAndamento" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="20" FontAttributes="Bold"/>
+        
+            <BoxView HeightRequest="10" Color="White" />
+
+            <Label 
+                Text="Aponte a camera para o QR Code "
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,0,0,0" FontSize="Medium" FontAttributes="None" x:Name="lblAponteACamera" IsVisible="True"/>
+            
+            <BoxView HeightRequest="50" Color="White" />
+
+            <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView"
+                               IsDetecting="True"
+                               IsTorchOn="False"
+                               BarcodesDetected="OnBarcodeDetected"
+                               WidthRequest="200"
+                               HeightRequest="200" IsVisible="True"/>
+
+
+            <Label 
+                Text="Aponte a camera para o QR Code "
+                x:Name="txtNomeEncontrado"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,80,0,0" FontSize="Medium" FontAttributes="None"/>
+
+            <BoxView HeightRequest="50" Color="White" />
+            
+            <Button x:Name="btnRegistrarPresenca" Text="Registrar Presença" WidthRequest="200" IsVisible="false" Clicked="RegistraPresenca"></Button>
+
         </VerticalStackLayout>
         <!-- ActivityIndicator para o efeito de loading -->
         <ActivityIndicator x:Name="LoadingIndicatorRegistroPresenca" IsRunning="True" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />

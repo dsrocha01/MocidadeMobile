@@ -4,6 +4,8 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using MocidadeMobile.Models;
+using ZXing.Net.Maui;
+using ZXing.Net.Maui.Controls;
 
 namespace MocidadeMobile
 {
@@ -18,7 +20,7 @@ namespace MocidadeMobile
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                }).UseBarcodeReader();
 
             builder.Services.AddSingleton<UsuarioViewModel>();
 #if DEBUG

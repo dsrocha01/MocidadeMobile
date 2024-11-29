@@ -75,6 +75,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="hs_err_pid18916.log" />
+	  <None Remove="hs_err_pid52464.log" />
 	  <None Remove="Resources\Images\bg_carteirinha.png" />
 	  <None Remove="Resources\Images\logo_mocidade.jpg" />
 	</ItemGroup>
@@ -87,6 +89,8 @@
 		<PackageReference Include="MySql.Data" Version="9.1.0" />
 		<PackageReference Include="QRCoder" Version="1.6.0" />
 		<PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+		<PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
+		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -123,6 +127,10 @@
 	  <Compile Update="Views\Login.xaml.cs">
 	    <DependentUpon>Login.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 </Project>

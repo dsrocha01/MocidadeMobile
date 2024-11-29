@@ -2,7 +2,6 @@ using Microsoft.Maui.Controls;
 using MocidadeMobile.Controllers;
 using MocidadeMobile.Models;
 using MocidadeMobile.Services;
-using MocidadeMobile.ViewModels;
 using Org.BouncyCastle.Asn1.X509;
 
 namespace MocidadeMobile.Views;

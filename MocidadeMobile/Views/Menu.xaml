@@ -2,7 +2,7 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MocidadeMobile.Views"
-             xmlns:vm="clr-namespace:MocidadeMobile.ViewModels"
+             xmlns:vm="clr-namespace:MocidadeMobile.Models"
              x:Class="MocidadeMobile.Views.Menu"
              Title=""
              >
@@ -34,13 +34,13 @@
     <FlyoutItem Title="Home" Icon="home.png">
         <ShellContent ContentTemplate="{DataTemplate local:Home}" />
     </FlyoutItem>
-    <FlyoutItem Title="Carteirinha Virtual" Icon="carteirinha.png" IsVisible="{Binding IsMembro}">
+    <FlyoutItem Title="Carteirinha Virtual" Icon="carteirinha.png" IsVisible="{Binding PossuiPermissaoCarteirinha}">
         <ShellContent ContentTemplate="{DataTemplate local:Carteirinha}" />
     </FlyoutItem>
-    <FlyoutItem Title="Registrar Presença" Icon="registro_presenca.png" IsVisible="{Binding IsUsuario}">
+    <FlyoutItem Title="Registrar Presença" Icon="registro_presenca.png" IsVisible="{Binding PossuiPermissaoRegistroPresenca}">
         <ShellContent ContentTemplate="{DataTemplate local:RegistroPresenca}"/>
     </FlyoutItem>
-    <FlyoutItem Title="Configuração" Icon="configuracao.png" IsVisible="{Binding IsUsuario}">
+    <FlyoutItem Title="Configuração" Icon="configuracao.png" IsVisible="{Binding PossuiPermissaoConfiguracao}">
         <ShellContent ContentTemplate="{DataTemplate local:Configuracao}"/>
     </FlyoutItem>
     <MenuItem Text="Sair" IconImageSource="logout.png" Clicked="OnLogoutButtonClicked" />
