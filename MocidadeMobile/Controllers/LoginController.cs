@@ -65,11 +65,10 @@ namespace MocidadeMobile.Controllers
             if (Application.Current?.MainPage?.Navigation != null)
             {
                 _sessionService.ClearUserSession();
+
                 // Navegue de volta para a página de login
-                ////await Application.Current.MainPage.Navigation.PushAsync(new Login());
-                // Navegue de volta para a página de login usando Shell
-                await Shell.Current.GoToAsync("//Login");
-            }
+                await Application.Current.MainPage.Navigation.PushAsync(new Login());
+             }
             else
             {
                 // Lidar com o caso onde Application.Current ou Application.Current.MainPage é nulo

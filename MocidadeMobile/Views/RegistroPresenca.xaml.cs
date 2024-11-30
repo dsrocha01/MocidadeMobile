@@ -4,6 +4,7 @@ using Microsoft.Maui.Controls;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 using MocidadeMobile.Controllers;
+using ZXing.QrCode.Internal;
 
 
 namespace MocidadeMobile.Views;
@@ -12,6 +13,8 @@ public partial class RegistroPresenca : ContentPage
 {
     private readonly SessionService _sessionService;
     private readonly RegistroPresencaController _registroPresencaController;
+    private EventoViewModel evento;
+    private UsuarioViewModel usuario;
 
     public RegistroPresenca()
 	{
@@ -19,6 +22,8 @@ public partial class RegistroPresenca : ContentPage
         NavigationPage.SetHasNavigationBar(this, false);
         _sessionService = new SessionService();
         _registroPresencaController = new RegistroPresencaController();
+        evento = new EventoViewModel();
+        usuario = new UsuarioViewModel();
 
         cameraBarcodeReaderView.Options = new BarcodeReaderOptions
         {
@@ -26,6 +31,11 @@ public partial class RegistroPresenca : ContentPage
         };
 
         cameraBarcodeReaderView.BarcodesDetected += OnBarcodeDetected;
+        btnRegistrarPresenca.Clicked += async (sender, e) => await RegistraPresenca();
+        btnRegistroManual.Clicked +=  CarregaRegistroManual;
+        btnRegistroCamera.Clicked +=  CarregaRegistroCamera;
+        txtCpf.TextChanged +=  VerificaCpf;
+        btnBuscaManual.Clicked += async (sender, e) => await RealizaBuscaManual();
         LoadData();
     }
 
@@ -40,7 +50,7 @@ public partial class RegistroPresenca : ContentPage
     {
         // Simula o carregamento de dados com um atraso
         await Task.Delay(1000);
-        EventoViewModel evento = _sessionService.GetEventoEmAndamento();
+        evento = _sessionService.GetEventoEmAndamento();
 
         if(evento != null)
         {
@@ -60,36 +70,140 @@ public partial class RegistroPresenca : ContentPage
         if (barcode != null)
         {
             // Exibir o valor do código QR
-            Dispatcher.Dispatch(() =>
+            Dispatcher.Dispatch(async () =>
             {
 
-                txtEventoEmAndamento.Text = $"QR Code detectado: {barcode.Value}";
+                // Mostrar o indicador de carregamento
+                frameCamera.IsVisible = false;
+                LoadingIndicatorCamera.IsVisible = true;
+                LoadingIndicatorCamera.IsRunning = true;
 
-                // Parar a captura da câmera
-                cameraBarcodeReaderView.IsDetecting = false;
-                cameraBarcodeReaderView.IsEnabled = false;
-                cameraBarcodeReaderView.IsVisible = false;
+                //cameraBarcodeReaderView.IsVisible = false;
+
+                usuario = await _registroPresencaController.RetornaUsuario(barcode.Value);
+
+                if(usuario.Nome !=  null)
+                    txtNomeEncontrado.Text = "Usuário: "+usuario.Nome + " \n CPF: " + usuario.CPF;
+                    txtNomeEncontrado.LineBreakMode = LineBreakMode.WordWrap;
 
 
-                lblAponteACamera.IsVisible = false;
+                // Oculta o indicador de carregamento
+                LoadingIndicatorCamera.IsVisible = false;
+                LoadingIndicatorCamera.IsRunning = false;
+
+                //lblAponteACamera.IsVisible = false;
+                btnRegistrarPresenca.IsVisible = true;
+
+                
 
             });
         }
     }
 
-    private async Task RegistraPresencaAsync()
+    private async Task RegistraPresenca()
     {
         try
         {
-            var evento = 1;
-            var usuario = 1;
+            // Mostrar o indicador de carregamento
+            frameCamera.IsVisible = false;
+            LoadingIndicatorCamera.IsVisible = true;
+            LoadingIndicatorCamera.IsRunning = true;
 
-            await _registroPresencaController.RegistraPresenca(evento, usuario);
+            var eventoId = evento.CodigoEvento;
 
+            if (usuario !=null && usuario.Id >0)
+            {
+                await _registroPresencaController.RegistraPresenca(eventoId, usuario);
+
+                await MessageService.SendAlertAsync("Pronto", "Presença registrada com sucesso.");
+
+                await ReloadPage();
+            }
+            else
+            {
+                await MessageService.SendAlertAsync("Atenção", "Usuario não localizado.");
+            }
         }
         catch(Exception e)
         {
             await MessageService.SendAlertAsync("Erro", "Falha ao registrar presença: " + e.Message);
         }
+        finally
+        {
+            // Ocultar o indicador de carregamento
+            frameCamera.IsVisible = true;
+            LoadingIndicatorCamera.IsVisible = false;
+            LoadingIndicatorCamera.IsRunning = false;
+            btnRegistrarPresenca.IsVisible = false;
+        }
+    }
+
+    private async Task RealizaBuscaManual()
+    {
+        if (txtCpf != null && txtCpf.IsVisible)
+        {
+            if (txtCpf.Text != "" && txtCpf.Text.Length == 11)
+            {
+                usuario = await _registroPresencaController.RetornaUsuario(txtCpf.Text);
+
+                if (usuario.Nome != null)
+                {
+                    txtNomeEncontrado.Text = "Usuário: " + usuario.Nome + " \n CPF: " + usuario.CPF;
+                    txtNomeEncontrado.LineBreakMode = LineBreakMode.WordWrap;
+
+                    btnRegistrarPresenca.IsVisible = true;
+                }
+                else
+                {
+                    btnRegistrarPresenca.IsVisible = false;
+
+                    await MessageService.SendAlertAsync("Atenção", "Usuario não localizado.");
+                }  
+            }
+        }
+    }
+
+    private void CarregaRegistroManual(object sender, EventArgs e)
+    {
+        frameCamera.IsVisible = false;
+        btnRegistroManual.IsVisible = false;
+        txtCpf.IsVisible = true;
+        btnRegistroCamera.IsVisible = true;
+    }
+
+    private void CarregaRegistroCamera(object sender, EventArgs e)
+    {
+        frameCamera.IsVisible = true;
+        btnRegistroManual.IsVisible = true;
+        txtCpf.Text = "";
+        txtCpf.IsVisible = false;
+        btnRegistrarPresenca.IsVisible = false;
+        btnRegistroCamera.IsVisible = false;
+    }
+
+    private void VerificaCpf(object sender, EventArgs e)
+    {
+        if (txtCpf != null && txtCpf.IsVisible)
+        {
+            if (txtCpf.Text.Length == 11)
+            {
+                btnBuscaManual.IsVisible = true;
+            }
+            else
+            {
+                btnBuscaManual.IsVisible = false;
+            }
+        }
+    }
+
+    private async Task ReloadPage()
+    {
+        // Remove a página atual da pilha de navegação
+        await Navigation.PopAsync();
+
+        Thread.Sleep(100);
+
+        // Navega para a mesma página novamente
+        await Navigation.PushAsync(new RegistroPresenca());
     }
 }

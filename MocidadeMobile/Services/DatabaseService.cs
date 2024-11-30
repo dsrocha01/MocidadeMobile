@@ -9,8 +9,6 @@ namespace MocidadeMobile.Services
     {
         private readonly string _connectionString = "server=mysql995.umbler.com;port=41890;user=mocidade;password=doug94887192;database=mocidade;Convert Zero Datetime=True";
 
-
-
         public DatabaseService()
         {
         }

@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:MocidadeMobile.Views"
              xmlns:vm="clr-namespace:MocidadeMobile.Models"
              x:Class="MocidadeMobile.Views.Menu"
+             Navigated="OnShellNavigated"
              Title=""
              >
 

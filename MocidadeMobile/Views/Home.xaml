@@ -7,6 +7,12 @@
         <Label 
             Text="Seja bem vindo(a) ao Mocidade Mobile."
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" FontSize="30" Margin="25" />
+
+        <BoxView HeightRequest="30" Color="White" />
+        <Label 
+    Text="Para começar selecione um item no menu, clique no botão superior ou arraste para o lado"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" FontSize="Large" Margin="20" />
     </VerticalStackLayout>
 </ContentPage>

@@ -13,7 +13,6 @@
         HorizontalOptions="Center"
         Margin="-25,0,0,0" FontSize="Medium" FontAttributes="None"/>
             <Label x:Name="txtEventoEmAndamento" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="20" FontAttributes="Bold"/>
-        
             <BoxView HeightRequest="10" Color="White" />
 
             <Label 
@@ -22,26 +21,46 @@
                 HorizontalOptions="Center"
                 Margin="0,0,0,0" FontSize="Medium" FontAttributes="None" x:Name="lblAponteACamera" IsVisible="True"/>
             
-            <BoxView HeightRequest="50" Color="White" />
+            <BoxView HeightRequest="10" Color="White" />
+            <Grid VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" HeightRequest="200">
+                <Frame
+                  WidthRequest="200"
+                  HeightRequest="200"
+                  CornerRadius="20"
+                  BorderColor="Gray"
+                  HasShadow="True"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Center"
+                  IsVisible="true"
+                  x:Name="frameCamera">
+                    <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView"
+                                   IsDetecting="True"
+                                   IsTorchOn="False"
+                                   BarcodesDetected="OnBarcodeDetected"
+                                   WidthRequest="200"
+                                   HeightRequest="200"
+                                   IsVisible="True"/>
+                </Frame>
+                <ActivityIndicator x:Name="LoadingIndicatorCamera" IsRunning="False" IsVisible="False" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />
+            </Grid>
 
-            <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView"
-                               IsDetecting="True"
-                               IsTorchOn="False"
-                               BarcodesDetected="OnBarcodeDetected"
-                               WidthRequest="200"
-                               HeightRequest="200" IsVisible="True"/>
-
+            <Entry x:Name="txtCpf" Margin="0,-90,0,0" FontSize="Medium" MaxLength="11" Placeholder="CPF sem pontos" TextChanged="VerificaCpf" WidthRequest="250" Keyboard="Numeric" IsVisible="False" />
 
             <Label 
-                Text="Aponte a camera para o QR Code "
+                Text=""
                 x:Name="txtNomeEncontrado"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 Margin="0,80,0,0" FontSize="Medium" FontAttributes="None"/>
-
-            <BoxView HeightRequest="50" Color="White" />
             
-            <Button x:Name="btnRegistrarPresenca" Text="Registrar Presença" WidthRequest="200" IsVisible="false" Clicked="RegistraPresenca"></Button>
+            <BoxView HeightRequest="30" Color="White" />
+            
+            <Button x:Name="btnRegistrarPresenca" Text="Registrar" WidthRequest="200" HeightRequest="50" IsVisible="false"></Button>
+            <BoxView HeightRequest="10" Color="White" />
+            <Button x:Name="btnRegistroManual" Text="Registrar Manualmente" WidthRequest="200" HeightRequest="50" Clicked="CarregaRegistroManual" IsVisible="true"></Button>
+            <Button x:Name="btnBuscaManual" Text="Buscar" WidthRequest="200" HeightRequest="50" IsVisible="false"></Button>
+            <BoxView HeightRequest="10" Color="White" />
+            <Button x:Name="btnRegistroCamera" Text="Ler QRCode" WidthRequest="200" HeightRequest="50" Clicked="CarregaRegistroCamera" IsVisible="false"></Button>
 
         </VerticalStackLayout>
         <!-- ActivityIndicator para o efeito de loading -->
