@@ -7,6 +7,11 @@
         <Label Text="Powered by DG Systems"
                TextColor="White"
                FontAttributes="Bold"
-               HorizontalOptions="Center" />
+               HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                Tapped="OnLabelTapped" />
+            </Label.GestureRecognizers>
+        </Label>
     </StackLayout>
 </ContentView>

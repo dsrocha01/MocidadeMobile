@@ -6,13 +6,13 @@
              Title="Registro de presença">
     <Grid>
         <VerticalStackLayout x:Name="ContentLayoutRegistroPresenca" IsVisible="False">
-        <BoxView HeightRequest="20" Color="White" />
+        <BoxView HeightRequest="0" Color="White" />
             <Label 
         Text="Evento em andamento"
         VerticalOptions="Center" 
         HorizontalOptions="Center"
-        Margin="-25,0,0,0" FontSize="Medium" FontAttributes="None"/>
-            <Label x:Name="txtEventoEmAndamento" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="20" FontAttributes="Bold"/>
+        Margin="-10,0,0,0" FontSize="Medium" FontAttributes="None"/>
+            <Label x:Name="txtEventoEmAndamento" Text="" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,0" FontSize="20" FontAttributes="Bold"/>
             <BoxView HeightRequest="10" Color="White" />
 
             <Label 
@@ -31,10 +31,11 @@
                   HasShadow="True"
                   VerticalOptions="Center"
                   HorizontalOptions="Center"
-                  IsVisible="true"
+                  IsVisible="false"
                   x:Name="frameCamera">
                     <zxing:CameraBarcodeReaderView x:Name="cameraBarcodeReaderView"
-                                   IsDetecting="True"
+                                   IsDetecting="False"
+                                   IsEnabled="False"
                                    IsTorchOn="False"
                                    BarcodesDetected="OnBarcodeDetected"
                                    WidthRequest="200"
@@ -44,14 +45,14 @@
                 <ActivityIndicator x:Name="LoadingIndicatorCamera" IsRunning="False" IsVisible="False" VerticalOptions="Center" HorizontalOptions="Center" Scale="2" />
             </Grid>
 
-            <Entry x:Name="txtCpf" Margin="0,-90,0,0" FontSize="Medium" MaxLength="11" Placeholder="CPF sem pontos" TextChanged="VerificaCpf" WidthRequest="250" Keyboard="Numeric" IsVisible="False" />
+            <Entry x:Name="txtCpf" Margin="0,20,0,-20" FontSize="Medium" MaxLength="11" Placeholder="CPF sem pontos" TextChanged="VerificaCpf" WidthRequest="250" Keyboard="Numeric" IsVisible="False" />
 
             <Label 
                 Text=""
                 x:Name="txtNomeEncontrado"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
-                Margin="0,80,0,0" FontSize="Medium" FontAttributes="None"/>
+                Margin="0,50,0,0" FontSize="Medium" FontAttributes="None"/>
             
             <BoxView HeightRequest="30" Color="White" />
             
